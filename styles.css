@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-image: url('caja_sorpresa.png');
+    background-size: cover;
+    animation: open 1s infinite;
+    cursor: pointer;
+}
+
+#box4 {
+    animation: vibrate 0.1s infinite;
+}
+
+@keyframes open {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes vibrate {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(2px, 2px); }
+    75% { transform: translate(-2px, 2px); }
+}
+
+.open-message {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+
+.message {
+    font-size: 24px;
+    color: black;
+    display: none;
+    animation: grow-shrink 1s infinite;
+    text-align: center;
+}
+
+@keyframes grow-shrink {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.warning-message {
+    display: none;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+
+.boxes-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ring-message, .try-again-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#ring-image {
+    width: 150px;
+    height: 150px;
+    animation: grow-shrink 1s infinite;
+}
+
+.try-again-message {
+    color: red;
+}
+
+.flower-effect {
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('Flor.png');
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
